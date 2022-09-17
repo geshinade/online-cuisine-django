@@ -59,7 +59,10 @@
                                         </div>
                                     </li>
                                     {% endfor %}
-                                    
+                                    {% if source_location %}
+                                    <br>
+                                    <span><small><b>{{vendor.kms}}km</b> away from {{source_location}}</small></span>
+                                    {% endif %}
                                 </ul>
                             </div>
                             
