@@ -34,7 +34,7 @@ def place_order(request):
     get_tax = Tax.objects.filter(is_active=True)
     subtotal = 0
     total_data = {}
-    k = {}
+    k = {} # an empty dictionary
     for i in cart_items:
         fooditem = FoodItem.objects.get(pk=i.fooditem.id, vendor_id__in=vendors_ids)
         v_id = fooditem.vendor.id

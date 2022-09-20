@@ -3,7 +3,8 @@ from django.contrib.auth.decorators import login_required
 from accounts.forms import UserInfoForm, UserProfileForm
 from accounts.models import UserProfile
 from django.contrib import messages
-from orders.models import Order
+from orders.models import Order, OrderedFood
+import simplejson as json
 
 @login_required(login_url='login')
 def cprofile(request):
